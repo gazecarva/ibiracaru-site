@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+  # ARQUIVO: servicos.html
+  # FUNÇÃO: página aberta quando o usuário clicar em Serviços.
+  # ESTRUTURA: topo + lista de serviços + bloco padrão inferior.
+  # OBSERVAÇÃO: o bloco Sobre/Contato foi repetido aqui para manter padrão visual.
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Serviços da Ibiracaru Consultoria Florestal: inventário florestal, PRAD, regularização ambiental, monitoramento, botânica aplicada e análise espacial." />
+  <title>Serviços | Ibiracaru Consultoria Florestal</title>
+  
+<style>
+/*
+# 01. VARIÁVEIS VISUAIS
+# Altere aqui as cores principais do site.
+*/
+:root {
+  --bg: #f4eadc;
+  --bg-soft: #fff8ee;
+  --green: #4f6f32;
+  --green-dark: #30451e;
+  --gold: #8a7138;
+  --text: #273022;
+  --muted: #65735b;
+  --line: #dfd2bf;
+}
+
+/*
+# 02. RESET BÁSICO
+# Remove margens automáticas e deixa o cálculo de tamanho mais previsível.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*
+# 03. CONTAINER GERAL
+*/
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px 56px;
+}
+
+/*
+# 04. CABEÇALHO E MENU
+*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0 42px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  width: 52px;
+  height: 52px;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-size: 28px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.35);
+}
+
+.brand-text strong {
+  display: block;
+  color: var(--green);
+  letter-spacing: 0.08em;
+  font-size: 18px;
+}
+
+.brand-text span {
+  color: var(--gold);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: var(--green-dark);
+}
+
+nav a {
+  transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+  opacity: 0.65;
+}
+
+/*
+# 05. PÁGINA INICIAL
+*/
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 42px;
+  align-items: center;
+  padding: 36px 0 60px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero h1 {
+  color: var(--green);
+  font-size: clamp(42px, 8vw, 88px);
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+}
+
+.hero h2 {
+  color: var(--gold);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: clamp(22px, 3vw, 34px);
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  max-width: 650px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid var(--green);
+}
+
+.button.primary {
+  background: var(--green);
+  color: #fff;
+}
+
+.button.secondary {
+  color: var(--green-dark);
+  background: rgba(255,255,255,0.35);
+}
+
+.hero-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(66, 53, 31, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-card h3 {
+  color: var(--green-dark);
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.hero-card ul {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.hero-card li::before {
+  content: "•";
+  color: var(--green);
+  font-weight: bold;
+  margin-right: 9px;
+}
+
+/*
+# 06. PÁGINA DE SERVIÇOS
+*/
+.services-hero {
+  padding: 36px 0 38px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.services-hero h1 {
+  color: var(--green);
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 0.98;
+  letter-spacing: 0.03em;
+  margin-bottom: 18px;
+}
+
+.services-hero p,
+.section-intro {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  max-width: 780px;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.service {
+  background: rgba(255,255,255,0.42);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 24px;
+  min-height: 230px;
+}
+
+.service h3 {
+  color: var(--green);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--muted);
+  font-size: 15.5px;
+}
+
+/*
+# 07. BLOCO PADRÃO INFERIOR
+# Repete Sobre, Contato e Rodapé nas páginas.
+*/
+section {
+  padding: 44px 0;
+}
+
+.section-title {
+  color: var(--green-dark);
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 36px;
+  align-items: start;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.profile {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile strong {
+  display: block;
+  color: var(--green);
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.profile span {
+  color: var(--muted);
+}
+
+.about p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--muted);
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+.contact-box {
+  background: var(--green-dark);
+  color: #fff;
+  border-radius: 28px;
+  padding: 34px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-box h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.contact-box p {
+  color: rgba(255,255,255,0.78);
+  font-size: 16px;
+}
+
+.contact-list {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-list a,
+.contact-list span {
+  display: block;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 16px;
+  padding: 14px 16px;
+  font-weight: 700;
+}
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--muted);
+  font-size: 14px;
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/*
+# 08. RESPONSIVIDADE
+*/
+@media (max-width: 860px) {
+  header, .hero, .about, .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+</head>
+<body>
+  <div class="page">
+    
+<!-- # CABEÇALHO PADRÃO -->
+<header>
+  <a class="brand" href="index.html" aria-label="Ibiracaru Consultoria Florestal">
+    <div class="brand-mark">I</div>
+    <div class="brand-text">
+      <strong>IBIRACARU</strong>
+      <span>Consultoria Florestal</span>
+    </div>
+  </a>
+  <nav aria-label="Navegação principal">
+    <a href="servicos.html">Serviços</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+    <main>
+      <!-- # PÁGINA DE SERVIÇOS -->
+      <section class="services-hero">
+        <h1>Serviços</h1>
+        <p>
+          Soluções técnicas para diagnóstico, planejamento e acompanhamento ambiental, com foco em clareza metodológica, viabilidade de execução e responsabilidade ecológica.
+        </p>
+      </section>
+
+      <!-- # LISTA PRINCIPAL DE SERVIÇOS -->
+      <section>
+        <h2 class="section-title">Áreas de atuação</h2>
+        <p class="section-intro">
+          A Ibiracaru atua com demandas ambientais rurais, restauração ecológica, caracterização da vegetação e apoio técnico a projetos que exigem leitura de campo e organização criteriosa das informações.
+        </p>
+
+        <div class="grid">
+          <article class="service">
+            <h3>Inventário florestal</h3>
+            <p>Levantamento de estrutura, composição florística, estimativas dendrométricas e apoio técnico para caracterização da vegetação em propriedades e áreas de estudo.</p>
+          </article>
+
+          <article class="service">
+            <h3>PRAD</h3>
+            <p>Elaboração e acompanhamento de projetos de recuperação de áreas degradadas, com definição de estratégias compatíveis com solo, relevo, uso atual e regeneração natural.</p>
+          </article>
+
+          <article class="service">
+            <h3>Regularização ambiental</h3>
+            <p>Apoio na organização de informações ambientais, leitura de APP, reserva legal, passivos ambientais e áreas prioritárias para conservação ou restauração.</p>
+          </article>
+
+          <article class="service">
+            <h3>Monitoramento ambiental</h3>
+            <p>Acompanhamento de plantios, regeneração natural, indicadores ecológicos e evolução de áreas em recuperação, com registro técnico e interpretação dos resultados.</p>
+          </article>
+
+          <article class="service">
+            <h3>Botânica aplicada</h3>
+            <p>Apoio em campo, coleta botânica, identificação preliminar, organização de listas florísticas e interpretação ecológica da vegetação nativa.</p>
+          </article>
+
+          <article class="service">
+            <h3>Análise espacial</h3>
+            <p>Mapas técnicos, leitura da paisagem e apoio à tomada de decisão em restauração, conectividade, uso do solo e planejamento ambiental.</p>
+          </article>
+        </div>
+      </section>
+      
+<!-- # BLOCO PADRÃO INFERIOR: SOBRE -->
+<section id="sobre" class="about">
+  <div class="profile">
+    <strong>Gabriel Carvalho</strong>
+    <span>Engenheiro Florestal | CREA ES-060626/D</span>
+  </div>
+  <div>
+    <h2 class="section-title">Sobre a Ibiracaru</h2>
+    <p>
+      A Ibiracaru nasce para oferecer consultoria florestal com base técnica, leitura de campo e atenção ao contexto ecológico local. O trabalho combina experiência prática em vegetação nativa, conhecimento botânico e planejamento ambiental.
+    </p>
+    <p>
+      A proposta é atuar com clareza, responsabilidade e precisão técnica, especialmente em inventários, restauração ecológica, regularização ambiental e suporte a projetos rurais e ambientais.
+    </p>
+  </div>
+</section>
+
+<!-- # BLOCO PADRÃO INFERIOR: CONTATO -->
+<section id="contato">
+  <div class="contact-box">
+    <div>
+      <h2>Contato</h2>
+      <p>
+        Para solicitar orçamento, enviar informações da área ou conversar sobre uma demanda ambiental, entre em contato pelo WhatsApp.
+      </p>
+    </div>
+    <div class="contact-list">
+      <a href="https://wa.me/5528999083154" target="_blank" rel="noopener">+55 28 99908-3154</a>
+      <span>ibiracaru.com.br</span>
+    </div>
+  </div>
+</section>
+
+<!-- # RODAPÉ PADRÃO -->
+<footer>
+  <span>© 2026 Ibiracaru Consultoria Florestal</span>
+  <span>Engenharia florestal, restauração ecológica e estudos ambientais.</span>
+</footer>
+
+    </main>
+  </div>
+</body>
+</html>
