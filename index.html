@@ -13,6 +13,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ibiracaru.com.br/" />
   <meta property="og:image" content="https://ibiracaru.com.br/imagens/mangara.jpeg" />
+  <meta property="og:image:alt" content="Paisagem natural associada à consultoria ambiental da Ibiracaru" />
 
   <title>Ibiracaru | Consultoria Ambiental e Florestal</title>
 
@@ -94,8 +95,10 @@
     }
 
     .brand {
-      display: flex;
-      flex-direction: column;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       font-weight: 800;
@@ -103,11 +106,25 @@
     }
 
     .brand small {
+      display: block;
       margin-top: 5px;
       font-size: 0.68rem;
       letter-spacing: 0.18em;
       font-weight: 500;
       opacity: 0.82;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.18));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
     }
 
     .nav-links {
@@ -174,6 +191,7 @@
     .mobile-menu-button.open span::after { transform: translateY(-6px) rotate(-45deg); }
 
     .hero {
+      min-height: 100svh;
       min-height: 100vh;
       position: relative;
       display: grid;
@@ -766,12 +784,15 @@
 <body>
   <header class="site-header" id="siteHeader">
     <div class="container nav">
-      <a href="#home" class="brand" aria-label="Ibiracaru">
-        IBIRACARU
-        <small>Consultoria Ambiental e Florestal</small>
+      <a href="#home" class="brand" aria-label="Ibiracaru Consultoria Ambiental e Florestal">
+        <img class="brand-mark" src="imagens/logo-ibiracaru.png" alt="" aria-hidden="true" />
+        <span class="brand-text">
+          <span>IBIRACARU</span>
+          <small>Consultoria Ambiental e Florestal</small>
+        </span>
       </a>
 
-      <button class="mobile-menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false">
+      <button class="mobile-menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
         <span></span>
       </button>
 
@@ -780,6 +801,7 @@
         <a href="#sobre">Sobre</a>
         <a href="#galeria">Campo</a>
         <a href="#atuacao">Atuação</a>
+        <a href="#contato">Contato</a>
         <a class="nav-cta" href="https://wa.me/5528999083154?text=Olá,%20gostaria%20de%20solicitar%20uma%20avaliação%20técnica%20ambiental." target="_blank" rel="noopener">WhatsApp</a>
       </nav>
     </div>
@@ -887,7 +909,7 @@
       <div class="container">
         <div class="section-kicker">Diferenciais</div>
         <h2 class="section-title">Consultoria técnica não se improvisa no escritório.</h2>
-        <p class="section-text">A qualidade de um diagnóstico ambiental depende da combinação entre método, campo e interpretação ecológica. Sem isso, o relatório vira apenas papel bem diagramado. Bonito, mas míope.</p>
+        <p class="section-text">A qualidade de um diagnóstico ambiental depende da combinação entre método, campo e interpretação ecológica. Sem isso, o relatório pode se limitar à aparência formal, sem sustentar uma decisão técnica segura.</p>
 
         <div class="features-grid">
           <div class="feature-card">
@@ -985,13 +1007,13 @@
       <div class="container">
         <div class="section-kicker">Contato</div>
         <h2 class="section-title">Precisa de suporte técnico ambiental?</h2>
-        <p>Envie sua demanda, localização da área e objetivo do serviço. A avaliação inicial permite indicar o melhor caminho técnico antes de transformar problema ambiental em labirinto burocrático.</p>
+        <p>Envie sua demanda, localização da área e objetivo do serviço. A avaliação inicial permite indicar o caminho técnico mais adequado, com clareza sobre escopo, documentação e viabilidade de execução.</p>
         <div class="cta-actions">
           <a class="btn btn-primary" href="https://wa.me/5528999083154?text=Olá,%20gostaria%20de%20solicitar%20uma%20avaliação%20técnica%20ambiental." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 14c-.25-.13-1.47-.72-1.7-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.96-.15.17-.3.19-.55.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.38-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.3 3.78.6.26 1.07.42 1.44.54.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.29ZM12.04 2A9.94 9.94 0 0 0 2.1 11.94c0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01A9.94 9.94 0 0 0 12.04 2Zm0 18.16h-.01a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.25 8.25 0 1 1 7 3.86Z"/></svg>
             Chamar no WhatsApp
           </a>
-          <a class="btn btn-secondary" href="mailto:contato@ibiracaru.com.br?subject=Solicitação%20de%20avaliação%20técnica">Enviar e-mail</a>
+          <a class="btn btn-secondary" href="https://wa.me/5528999083154?text=Olá,%20gostaria%20de%20enviar%20informações%20sobre%20uma%20área%20para%20avaliação%20técnica." target="_blank" rel="noopener">Enviar informações da área</a>
         </div>
       </div>
     </section>
@@ -1001,11 +1023,11 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-brand">IBIRACARU</div>
+        <img src="imagens/logo-ibiracaru.png" alt="" aria-hidden="true" style="width: 78px; height: auto; margin: 14px 0 10px; opacity: .92;" />
         <p>Ciência aplicada à gestão ambiental e ao território.</p>
       </div>
       <div>
         <h4>Contato</h4>
-        <p><a href="mailto:contato@ibiracaru.com.br">contato@ibiracaru.com.br</a></p>
         <p><a href="https://wa.me/5528999083154" target="_blank" rel="noopener">+55 28 99908-3154</a></p>
       </div>
       <div>
@@ -1028,8 +1050,20 @@
     "name": "Ibiracaru Consultoria Ambiental e Florestal",
     "description": "Ciência aplicada à gestão ambiental e ao território. Inventário florestal, PRAD, regularização ambiental, monitoramento ecológico e diagnósticos técnicos.",
     "areaServed": ["Espírito Santo", "Rio de Janeiro", "Minas Gerais"],
+    "founder": {
+      "@type": "Person",
+      "name": "Gabriel Carvalho",
+      "jobTitle": "Engenheiro Florestal"
+    },
+    "knowsAbout": [
+      "Inventário florestal",
+      "PRAD",
+      "Regularização ambiental",
+      "Restauração ecológica",
+      "Fitossociologia",
+      "Diagnóstico ambiental"
+    ],
     "telephone": "+55 28 99908-3154",
-    "email": "contato@ibiracaru.com.br",
     "url": "https://ibiracaru.com.br/"
   }
   </script>
@@ -1055,6 +1089,15 @@
         menuButton.classList.remove("open");
         menuButton.setAttribute("aria-expanded", "false");
       });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navLinks.classList.contains("open")) {
+        navLinks.classList.remove("open");
+        menuButton.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.focus();
+      }
     });
   </script>
 </body>
