@@ -122,21 +122,23 @@
 
     .brand-title {
       color: var(--beige);
-      letter-spacing: 0.15em;
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: 0.045em;
       text-transform: uppercase;
-      font-weight: 800;
-      font-size: 1rem;
+      font-weight: 700;
+      font-size: 1.45rem;
+      line-height: 0.9;
     }
 
     .brand small {
       display: block;
-      margin-top: 5px;
-      font-size: 0.66rem;
-      letter-spacing: 0.16em;
+      margin-top: 6px;
+      font-size: 0.64rem;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       font-weight: 700;
       color: var(--beige-2);
-      opacity: 0.9;
+      opacity: 0.92;
     }
 
     .nav-links {
@@ -232,28 +234,29 @@
     }
 
     .hero-logo {
-      width: clamp(150px, 18vw, 240px);
-      margin: 0 auto 18px;
-      filter: drop-shadow(0 22px 32px rgba(0,0,0,0.32));
+      width: clamp(118px, 12vw, 178px);
+      margin: 0 0 18px;
+      filter: drop-shadow(0 22px 32px rgba(0,0,0,0.34));
     }
 
     .hero-brand {
-      letter-spacing: 0.16em;
+      font-family: "Cormorant Garamond", serif;
+      letter-spacing: 0.025em;
       text-transform: uppercase;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--beige);
-      font-size: clamp(2.6rem, 6.4vw, 6rem);
-      line-height: 0.95;
-      margin-bottom: 10px;
+      font-size: clamp(4.3rem, 10vw, 8.4rem);
+      line-height: 0.86;
+      margin-bottom: 18px;
     }
 
     .hero-subtitle {
       color: var(--beige-2);
-      letter-spacing: 0.1em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
-      font-weight: 700;
-      font-size: clamp(0.92rem, 1.6vw, 1.25rem);
-      margin-bottom: 36px;
+      font-weight: 800;
+      font-size: clamp(0.86rem, 1.5vw, 1.18rem);
+      margin-bottom: 34px;
     }
 
     .hero-kicker {
@@ -396,12 +399,12 @@
 
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 18px;
     }
 
     .service-card {
-      grid-column: span 1;
+      grid-column: span 2;
       min-height: 330px;
       position: relative;
       overflow: hidden;
@@ -431,6 +434,12 @@
     .service-card p {
       color: var(--muted);
       font-size: 0.96rem;
+    }
+
+    .service-card:nth-child(4),
+    .service-card:nth-child(5) {
+      grid-column: span 3;
+      min-height: 280px;
     }
 
     .process {
@@ -564,6 +573,13 @@
       filter: drop-shadow(0 18px 28px rgba(0,0,0,0.16));
     }
 
+    .symbol-emblem {
+      width: 118px;
+      height: auto;
+      margin: 0 0 18px;
+      filter: drop-shadow(0 14px 20px rgba(0,0,0,0.14));
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
@@ -651,11 +667,13 @@
 
     .footer-brand {
       color: var(--beige);
-      font-weight: 800;
-      letter-spacing: 0.16em;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+      letter-spacing: 0.055em;
       text-transform: uppercase;
-      margin-bottom: 10px;
-      font-size: 1.28rem;
+      margin-bottom: 8px;
+      font-size: 2.2rem;
+      line-height: 0.9;
     }
 
     .footer-grid h4 {
@@ -690,6 +708,11 @@
 
     @media (max-width: 1120px) {
       .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-card,
+      .service-card:nth-child(4),
+      .service-card:nth-child(5) {
+        grid-column: span 1;
+      }
     }
 
     @media (max-width: 920px) {
@@ -777,6 +800,7 @@
   <main id="home">
     <section class="hero" aria-label="Ibiracaru Engenharia Florestal e Consultoria Ambiental">
       <div class="container hero-inner">
+        <img class="hero-logo" src="imagens/logo-ibiracaru.png" alt="Símbolo botânico da Ibiracaru" />
         <div class="hero-brand">IBIRACARU</div>
         <div class="hero-subtitle">Engenharia Florestal e Consultoria Ambiental</div>
         <h1 class="hero-kicker">Ciência aplicada ao território.</h1>
@@ -817,7 +841,7 @@
             <div>
               <span class="service-number">01</span>
               <h3>Diagnóstico e avaliação ambiental</h3>
-              <p>Levantamentos ecológicos, florísticos, fitossociológicos e análises técnicas para compreender a estrutura, composição e potencial ambiental de cada área.</p>
+              <p>Avaliação integrada da área, considerando vegetação, uso do solo, APPs, passivos ambientais, riscos, potencial de regeneração e possibilidades de intervenção técnica.</p>
             </div>
           </article>
 
@@ -848,8 +872,8 @@
           <article class="service-card">
             <div>
               <span class="service-number">05</span>
-              <h3>Inventários e estudos técnicos</h3>
-              <p>Inventários florestais, levantamentos botânicos e estudos ambientais voltados à tomada de decisão técnica segura.</p>
+              <h3>Inventários, florística e fitossociologia</h3>
+              <p>Inventários florestais, levantamentos botânicos, identificação de espécies e análises fitossociológicas voltadas à caracterização técnica da vegetação.</p>
             </div>
           </article>
         </div>
@@ -949,6 +973,7 @@
             <p>Inspirado em raízes do tupi antigo, Ibiracaru remete simbolicamente à árvore como sustento da vida. Mais do que um nome, expressa uma visão ecológica: a compreensão de que os sistemas naturais sustentam água, solo, biodiversidade e continuidade da paisagem.</p>
           </article>
           <article class="about-point">
+            <img class="symbol-emblem" src="imagens/logo-ibiracaru.png" alt="Símbolo botânico da Ibiracaru" loading="lazy" />
             <h3>O símbolo</h3>
             <p>A identidade visual da Ibiracaru representa permanência, resiliência ecológica e continuidade. Reflete a capacidade dos sistemas naturais de persistirem, regenerarem-se e sustentarem o território mesmo diante de pressões e transformações.</p>
           </article>
