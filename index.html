@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="imagens/favicon-ibiracaru.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -114,7 +114,7 @@
       flex: 0 0 auto;
       margin-left: -12px;
       margin-right: -4px;
-      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.22));
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.22));
     }
 
     .brand-text {
@@ -168,9 +168,9 @@
       display: none;
       width: 44px;
       height: 44px;
-      border: 1px solid rgba(255,255,255,0.38);
+      border: 1px solid rgba(255, 255, 255, 0.38);
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.08);
       color: var(--white);
       cursor: pointer;
       align-items: center;
@@ -257,10 +257,13 @@
       background: var(--sand);
     }
 
-    h1, h2, h3 {
-      font-family: "Cormorant Garamond", serif;
-      line-height: 0.98;
-      font-weight: 700;
+    h1,
+    h2,
+    h3 {
+      font-family: "Inter", sans-serif;
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.04em;
     }
 
     h1 {
@@ -311,7 +314,7 @@
     .btn-secondary {
       border: 1px solid rgba(255, 255, 255, 0.38);
       color: var(--white);
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
     }
 
     .btn svg {
@@ -333,9 +336,11 @@
     }
 
     .section-title {
+      font-family: "Inter", sans-serif;
+      font-size: clamp(2.2rem, 4.6vw, 4.4rem);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
       color: var(--green);
-      font-size: clamp(2.5rem, 5.4vw, 5rem);
-      letter-spacing: -0.04em;
       margin-bottom: 24px;
     }
 
@@ -426,9 +431,10 @@
 
     .feature-card strong {
       display: block;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.55rem;
-      line-height: 1.05;
+      font-family: "Inter", sans-serif;
+      font-size: 1.25rem;
+      line-height: 1.15;
+      font-weight: 800;
       margin-bottom: 16px;
     }
 
@@ -451,7 +457,7 @@
     .about-logo {
       width: clamp(150px, 20vw, 260px);
       margin-bottom: 24px;
-      filter: drop-shadow(0 18px 28px rgba(0,0,0,0.16));
+      filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.16));
     }
 
     .about-points {
@@ -510,6 +516,59 @@
       width: 100%;
       height: 620px;
       object-fit: cover;
+    }
+
+    .gallery {
+      background: var(--white);
+    }
+
+    .gallery-grid {
+      margin-top: 46px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 240px;
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      background: var(--sand);
+    }
+
+    .gallery-item.large {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .gallery-item.wide {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.55s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-item span {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      z-index: 2;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--white);
+      background: rgba(24, 53, 47, 0.75);
+      backdrop-filter: blur(8px);
+      font-weight: 800;
+      font-size: 0.8rem;
     }
 
     .coverage {
@@ -620,7 +679,7 @@
       display: grid;
       place-items: center;
       box-shadow: 0 18px 44px rgba(0, 0, 0, 0.26);
-      transition: transform .2s ease;
+      transition: transform 0.2s ease;
     }
 
     .whatsapp-float:hover {
@@ -645,7 +704,7 @@
         gap: 14px;
         padding: 22px;
         background: rgba(34, 55, 47, 0.98);
-        border: 1px solid rgba(255,255,255,0.12);
+        border: 1px solid rgba(255, 255, 255, 0.12);
         border-radius: 22px;
         box-shadow: var(--shadow);
       }
@@ -676,6 +735,10 @@
       .coverage-grid,
       .footer-grid {
         grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
@@ -751,6 +814,17 @@
         right: 16px;
         bottom: 16px;
       }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 290px;
+      }
+
+      .gallery-item.large,
+      .gallery-item.wide {
+        grid-column: auto;
+        grid-row: auto;
+      }
     }
   </style>
 </head>
@@ -773,6 +847,7 @@
         <a href="#servicos">Serviços</a>
         <a href="#sobre">Sobre</a>
         <a href="#responsavel">Responsável</a>
+        <a href="#galeria">Campo</a>
         <a href="#atuacao">Atuação</a>
         <a href="#contato">Contato</a>
         <a class="nav-cta" href="https://wa.me/5528999083154?text=Olá,%20gostaria%20de%20solicitar%20uma%20avaliação%20técnica%20ambiental." target="_blank" rel="noopener">WhatsApp</a>
@@ -801,46 +876,46 @@
         <div class="services-head">
           <div>
             <div class="section-kicker">Serviços técnicos</div>
-            <h2 class="section-title">Soluções ambientais com base em diagnóstico real.</h2>
+            <h2 class="section-title">Soluções ambientais organizadas por etapa do projeto.</h2>
           </div>
-          <p class="section-text">Atuação técnica para compreender, regularizar, recuperar e planejar ambientalmente áreas rurais, empreendimentos e paisagens produtivas.</p>
+          <p class="section-text">A atuação da Ibiracaru parte primeiro da leitura técnica da área. Depois entram os produtos específicos: regularização, restauração, inventário, florística, fitossociologia e monitoramento.</p>
         </div>
 
         <div class="service-grid">
           <article class="service-card">
             <span>01</span>
-            <h3>Inventário Florestal</h3>
-            <p>Levantamento quantitativo e qualitativo da vegetação para licenciamento, manejo, supressão autorizada, compensação e tomada de decisão ambiental.</p>
+            <h3>Diagnóstico e avaliação ambiental</h3>
+            <p>Avaliação integrada da área, considerando vegetação, uso do solo, APPs, passivos ambientais, riscos, potencial de regeneração e possibilidades de intervenção técnica.</p>
           </article>
 
           <article class="service-card">
             <span>02</span>
-            <h3>PRAD e Restauração</h3>
-            <p>Planejamento técnico de recuperação ambiental com estratégias compatíveis com o histórico da área, o solo, a vegetação e o potencial de regeneração.</p>
+            <h3>Regularização ambiental</h3>
+            <p>Suporte técnico para adequação ambiental, organização documental, interpretação de exigências e planejamento voltado à conformidade legal da propriedade ou empreendimento.</p>
           </article>
 
           <article class="service-card">
             <span>03</span>
-            <h3>Regularização Ambiental</h3>
-            <p>Apoio técnico em adequação ambiental, documentação, CAR, exigências regulatórias e organização de informações ambientais da propriedade.</p>
+            <h3>PRAD e restauração ecológica</h3>
+            <p>Planejamento de recuperação de áreas degradadas, recomposição vegetal e definição de estratégias compatíveis com solo, paisagem, uso atual e capacidade de regeneração.</p>
           </article>
 
           <article class="service-card">
             <span>04</span>
-            <h3>Monitoramento Ecológico</h3>
-            <p>Avaliação de regeneração natural, estrutura da vegetação, indicadores ambientais e acompanhamento técnico de áreas em restauração.</p>
+            <h3>Inventário florestal</h3>
+            <p>Levantamento quantitativo e qualitativo da vegetação para caracterização estrutural, licenciamento, planejamento ambiental, supressão autorizada ou compensação.</p>
           </article>
 
           <article class="service-card">
             <span>05</span>
-            <h3>Florística e Fitossociologia</h3>
-            <p>Diagnóstico botânico aplicado à composição, estrutura e padrões da vegetação, com suporte à interpretação ambiental e científica.</p>
+            <h3>Florística e fitossociologia</h3>
+            <p>Levantamentos botânicos, identificação de espécies e análises da composição, estrutura e padrões da vegetação, com base em critérios ecológicos e florestais.</p>
           </article>
 
           <article class="service-card">
             <span>06</span>
-            <h3>Diagnóstico Ambiental</h3>
-            <p>Leitura integrada do território para subsidiar projetos, regularização, restauração, gestão rural e decisões técnicas ambientais.</p>
+            <h3>Monitoramento ecológico</h3>
+            <p>Acompanhamento de áreas em restauração, regeneração natural, indicadores da vegetação, sobrevivência de mudas e evolução ambiental ao longo do tempo.</p>
           </article>
         </div>
       </div>
@@ -917,6 +992,46 @@
       </div>
     </section>
 
+    <section class="gallery" id="galeria">
+      <div class="container">
+        <div class="section-kicker">Campo e ecossistemas</div>
+        <h2 class="section-title">O território visto de perto.</h2>
+        <p class="section-text">Registros de campo, ambientes naturais, inventários, coletas botânicas e paisagens de atuação técnica.</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item large">
+            <img src="imagens/mangara.jpeg" alt="Curso d'água associado à vegetação ripária em paisagem rural" loading="lazy" />
+            <span>Ambiente ripário</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagens/eugenia vr.jpeg" alt="Material botânico fértil utilizado em identificação florística" loading="lazy" />
+            <span>Florística</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagens/fes.jpeg" alt="Floresta estacional semidecidual em ambiente de encosta no Espírito Santo" loading="lazy" />
+            <span>FES do Espírito Santo</span>
+          </div>
+
+          <div class="gallery-item wide">
+            <img src="imagens/restinga-1.jpeg" alt="Restinga arbustivo-arbórea sobre sedimento arenoso" loading="lazy" />
+            <span>Restinga arbustivo-arbórea</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagens/fitossociologia-fo.jpeg" alt="Indivíduo arbóreo marcado durante levantamento fitossociológico" loading="lazy" />
+            <span>Fitossociologia</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagens/xylopia fod.jpeg" alt="Ramo fértil coletado para apoio à identificação botânica" loading="lazy" />
+            <span>Identificação botânica</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="coverage" id="atuacao">
       <div class="container coverage-grid">
         <div>
@@ -943,7 +1058,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 14c-.25-.13-1.47-.72-1.7-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.96-.15.17-.3.19-.55.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.38-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.3 3.78.6.26 1.07.42 1.44.54.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.29ZM12.04 2A9.94 9.94 0 0 0 2.1 11.94c0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01A9.94 9.94 0 0 0 12.04 2Zm0 18.16h-.01a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.25 8.25 0 1 1 7 3.86Z"/></svg>
             Chamar no WhatsApp
           </a>
-          <a class="btn btn-secondary" href="mailto:contato@ibiracaru.com.br?subject=Solicitação%20de%20avaliação%20técnica">Enviar e-mail</a>
+          <a class="btn btn-secondary" href="https://wa.me/5528999083154?text=Olá,%20gostaria%20de%20enviar%20informações%20sobre%20uma%20área%20para%20avaliação%20técnica." target="_blank" rel="noopener">Enviar informações da área</a>
         </div>
       </div>
     </section>
@@ -957,13 +1072,13 @@
       </div>
       <div>
         <h4>Contato</h4>
-        <p><a href="mailto:contato@ibiracaru.com.br">contato@ibiracaru.com.br</a></p>
         <p><a href="https://wa.me/5528999083154" target="_blank" rel="noopener">+55 28 99908-3154</a></p>
       </div>
       <div>
         <h4>Responsável técnico</h4>
         <p>Gabriel Carvalho</p>
         <p>Engenheiro Florestal</p>
+        <p>Mestre em Ecologia Florestal pela UFES</p>
         <p>CREA ES-060626/D</p>
       </div>
     </div>
@@ -981,12 +1096,11 @@
     "description": "Ciência aplicada à gestão ambiental e ao território. Inventário florestal, PRAD, regularização ambiental, monitoramento ecológico e diagnósticos técnicos.",
     "areaServed": ["Espírito Santo", "Rio de Janeiro", "Minas Gerais"],
     "telephone": "+55 28 99908-3154",
-    "email": "contato@ibiracaru.com.br",
     "url": "https://ibiracaru.com.br/",
     "founder": {
       "@type": "Person",
       "name": "Gabriel Carvalho",
-      "jobTitle": "Engenheiro Florestal"
+      "jobTitle": "Engenheiro Florestal e Mestre em Ecologia Florestal pela UFES"
     },
     "knowsAbout": [
       "Inventário florestal",
