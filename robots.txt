@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ibiracaru.com.br/sitemap.xml
