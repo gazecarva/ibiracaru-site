@@ -1,1 +1,161 @@
-ibiracaru.com.br
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Registros de campo, ecossistemas, inventários, coletas botânicas e paisagens de atuação técnica da Ibiracaru." />
+  <meta name="author" content="Ibiracaru Engenharia Florestal e Consultoria Ambiental" />
+  <meta name="theme-color" content="#52633a" />
+
+  <meta property="og:title" content="Campo e ecossistemas | Ibiracaru" />
+  <meta property="og:description" content="Registros de campo, ecossistemas, inventários, coletas botânicas e paisagens de atuação técnica da Ibiracaru." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ibiracaru.com.br/campo.html" />
+  <meta property="og:image" content="https://ibiracaru.com.br/imagens/monast.jpeg" />
+  <meta property="og:image:alt" content="Paisagem natural associada à consultoria ambiental da Ibiracaru" />
+
+  <title>Campo e ecossistemas | Ibiracaru</title>
+  <link rel="canonical" href="https://ibiracaru.com.br/campo.html" />
+  <link rel="icon" type="image/png" href="imagens/favicon-ibiracaru.png" />
+  <link rel="apple-touch-icon" href="imagens/favicon-ibiracaru.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="internal-page">
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Ibiracaru Engenharia Florestal e Consultoria Ambiental">
+        <img class="brand-mark" src="imagens/logo-ibiracaru.png" alt="" aria-hidden="true" />
+        <span class="brand-text">
+          <span class="brand-title">IBIRACARU</span>
+          <small>Engenharia Florestal e Consultoria Ambiental</small>
+        </span>
+      </a>
+
+      <button class="mobile-menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Menu principal">
+        <a href="servicos.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="responsavel.html">Responsável</a>
+        <a href="campo.html" aria-current="page">Campo</a>
+        <a href="atuacao.html">Atuação</a>
+        <a href="contato.html">Contato</a>
+        <a class="nav-cta" href="https://wa.me/5528999083154?text=Olá,%20gostaria%20de%20solicitar%20uma%20avaliação%20técnica%20ambiental." target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="internal-main">
+    <section class="gallery" id="galeria">
+      <div class="container">
+        <div class="section-kicker">Campo e ecossistemas</div>
+        <h2 class="section-title">O território visto de perto.</h2>
+        <p class="section-text">Registros de campo, ambientes naturais, inventários, coletas botânicas e paisagens de atuação técnica.</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item large">
+            <img src="imagens/mangara.jpeg" alt="Curso d'água associado à vegetação ripária em paisagem rural" loading="lazy" />
+            <span>Ambiente ripário</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagens/eugenia vr.jpeg" alt="Material botânico fértil utilizado em identificação florística" loading="lazy" />
+            <span>Florística</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagens/fes.jpeg" alt="Floresta estacional semidecidual em ambiente de encosta no Espírito Santo" loading="lazy" />
+            <span>FES do Espírito Santo</span>
+          </div>
+
+          <div class="gallery-item wide">
+            <img src="imagens/restinga-1.jpeg" alt="Restinga arbustivo-arbórea sobre sedimento arenoso" loading="lazy" />
+            <span>Restinga arbustivo-arbórea</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagens/fitossociologia-fo.jpeg" alt="Indivíduo arbóreo marcado durante levantamento fitossociológico" loading="lazy" />
+            <span>Fitossociologia</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagens/xylopia fod.jpeg" alt="Ramo fértil coletado para apoio à identificação botânica" loading="lazy" />
+            <span>Identificação botânica</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contato">
+      <div class="container">
+        <div class="section-kicker">Contato</div>
+        <h2 class="section-title">Precisa de suporte técnico ambiental?</h2>
+        <p>Envie sua demanda, localização da área e objetivo do serviço. A avaliação inicial permite indicar o melhor caminho técnico antes de transformar uma demanda ambiental em burocracia desnecessária.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://wa.me/5528999083154?text=Olá,%20gostaria%20de%20solicitar%20uma%20avaliação%20técnica%20ambiental." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 14c-.25-.13-1.47-.72-1.7-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.96-.15.17-.3.19-.55.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.38-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.3 3.78.6.26 1.07.42 1.44.54.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.29ZM12.04 2A9.94 9.94 0 0 0 2.1 11.94c0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01A9.94 9.94 0 0 0 12.04 2Zm0 18.16h-.01a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.25 8.25 0 1 1 7 3.86Z"/></svg>
+            Chamar no WhatsApp
+          </a>
+          <a class="btn btn-secondary" href="https://wa.me/5528999083154?text=Olá,%20gostaria%20de%20enviar%20informações%20sobre%20uma%20área%20para%20avaliação%20técnica." target="_blank" rel="noopener">Enviar informações da área</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">IBIRACARU</div>
+        <p>Ciência aplicada à gestão ambiental e ao território.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p><a href="https://wa.me/5528999083154" target="_blank" rel="noopener">+55 28 99908-3154</a></p>
+      </div>
+      <div>
+        <h4>Responsável técnico</h4>
+        <p>Gabriel Carvalho</p>
+        <p>Engenheiro Florestal</p>
+        <p>Mestre em Ecologia Florestal pela UFES</p>
+        <p>CREA ES-060626/D</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5528999083154?text=Olá,%20gostaria%20de%20solicitar%20uma%20avaliação%20técnica%20ambiental." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 14c-.25-.13-1.47-.72-1.7-.8-.23-.08-.4-.13-.56.13-.17.25-.65.8-.8.96-.15.17-.3.19-.55.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.38-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.3 3.78.6.26 1.07.42 1.44.54.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.29ZM12.04 2A9.94 9.94 0 0 0 2.1 11.94c0 1.75.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01A9.94 9.94 0 0 0 12.04 2Zm0 18.16h-.01a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.25 8.25 0 1 1 7 3.86Z"/></svg>
+  </a>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ibiracaru Engenharia Florestal e Consultoria Ambiental",
+    "description": "Ciência aplicada à gestão ambiental e ao território. Inventário florestal, regularização ambiental, recuperação de áreas degradadas, monitoramento ecológico e diagnósticos técnicos.",
+    "areaServed": ["Espírito Santo", "Rio de Janeiro", "Outros estados sob demanda"],
+    "telephone": "+55 28 99908-3154",
+    "url": "https://ibiracaru.com.br/",
+    "founder": {
+      "@type": "Person",
+      "name": "Gabriel Carvalho",
+      "jobTitle": "Engenheiro Florestal e Mestre em Ecologia Florestal pela UFES"
+    },
+    "knowsAbout": [
+      "Inventário florestal",
+      "Regularização ambiental",
+      "Recuperação de áreas degradadas",
+      "Fitossociologia",
+      "Diagnóstico ambiental"
+    ]
+  }
+  </script>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
